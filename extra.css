@@ -1,0 +1,144 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #f3e5f5, #e1bee7);
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: linear-gradient(90deg, #3d0066, #ff0099);
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
+    box-shadow: 0 5px 15px rgba(255, 102, 204, 0.5);
+    margin-top:0px;
+}
+.navbar h1 {
+    margin: 0;
+    font-size: 32px;
+}
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-right:15px;
+}
+.search-bar {
+    padding: 8px 12px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 16px;
+    width: 250px;
+}
+.search-icon {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    color: gray;
+}
+.btn-logout {
+    background: linear-gradient(90deg, #ff0066, #ffcc00);
+color: white;
+/* padding: 6px 10px;*/
+padding:8px 12px;
+padding-left:30px;
+border-radius: 50px;
+border: none;
+cursor: pointer;
+font-weight: bold;
+transition: 0.3s;
+text-decoration: none;
+box-shadow: 0 5px 15px rgba(255, 102, 204, 0.5);
+margin-right: 15px;
+font-size:15px;
+width:65px;
+
+}
+.btn-logout:hover{
+    transform: scale(1.1);
+    background: linear-gradient(90deg, #ffcc00, #ff0066);
+
+}
+.entry {
+    background: white;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.btn {
+    padding: 8px 12px;
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(90deg, #ff0066, #ffcc00);
+    border-radius: 5px;
+    margin-right: 10px;
+    box-shadow: 0 5px 15px rgba(255, 102, 204, 0.5);
+    cursor: pointer;
+}
+.btn:hover{
+    transform: scale(1.1);
+    background: linear-gradient(90deg, #ffcc00, #ff0066);
+}
+.dark-mode {
+    background-color: #222;
+    color: white;
+}
+.dark-mode .entry {
+    background: #333;
+    border-color: #444;
+}
+#darkModeToggle{
+    background: linear-gradient(90deg, #ff0066, #ffcc00);
+color: white;
+padding: 8px 12px;
+border-radius: 20px;
+border: none;
+cursor: pointer;
+font-weight: bold;
+transition: 0.3s;
+
+box-shadow: 0 5px 15px rgba(255, 102, 204, 0.5);
+margin-right: 15px;
+}
+#darkModeToggle:hover{
+    transform: scale(1.1);
+    background: linear-gradient(90deg, #ffcc00, #ff0066);}
+/* Dark Mode */
+.dark-mode {
+background: #1a1a1a;
+color: white;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+    .nav-right {
+        margin-top: 10px;
+    }
+    .btn, .btn-logout, #darkModeToggle {
+        font-size: 10px;
+        padding: 6px 10px;
+    }
+}
+@media (max-width: 480px) {
+    .entry {
+        width: 85%;
+    }
+    .search-bar{
+width:100px;
+margin-left:0px;
+}
+}

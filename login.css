@@ -1,0 +1,184 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #f3e5f5, #e1bee7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    transition: background 0.3s;
+    padding: 20px;
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+    color: #ffcc00;
+    background: rgba(25, 25, 25, 0.95);
+}
+
+/* Toggle Button */
+#darkModeToggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: linear-gradient(90deg, #ff0066, #ffcc00);
+    color: white;
+    padding: 10px 18px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(255, 102, 204, 0.5);
+    font-size: 0.95rem;
+}
+
+#darkModeToggle:hover {
+    transform: scale(1.1);
+    background: linear-gradient(90deg, #ffcc00, #ff0066);
+}
+
+.dark-mode #darkModeToggle {
+    background: linear-gradient(90deg, #ffcc00, #ff0066);
+    box-shadow: 0 5px 15px rgba(138, 43, 226, 0.7), 0 5px 15px rgba(255, 20, 147, 0.7);
+}
+
+.dark-mode #darkModeToggle:hover {
+    background: linear-gradient(90deg, #ff0066, #ffcc00);
+}
+
+/* Form Container */
+form {
+    background: rgba(250, 250, 250, 0.98);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 300px;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.dark-mode form {
+    background: rgba(30, 30, 30, 0.8);
+    box-shadow: 5px 5px 15px rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Input Fields */
+input {
+    width: 95%;
+    padding: 15px;
+    margin: 12px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+input:focus, input:hover {
+    box-shadow: 0 6px 18px rgba(255, 102, 204, 0.6);
+    outline: none;
+}
+
+.dark-mode input {
+    background: #333;
+    color: white;
+    border: 1px solid #555;
+}
+
+.dark-mode input:focus, .dark-mode input:hover {
+    box-shadow: 0 6px 18px rgba(138, 43, 226, 0.7);
+}
+
+/* Login Button */
+button[type="submit"] {
+    background: linear-gradient(90deg, #ff0066, #ffcc00);
+    color: white;
+    padding: 12px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 5px 15px rgba(255, 102, 204, 0.5);
+    width: 100%;
+    max-width: 50%;
+    align-self: center;
+    margin-top: 15px;
+}
+
+button[type="submit"]:hover {
+    transform: scale(1.1);
+    background: linear-gradient(90deg, #ffcc00, #ff0066);
+    box-shadow: 0 7px 18px rgba(255, 102, 204, 0.7);
+}
+
+.dark-mode button[type="submit"] {
+    background: linear-gradient(90deg, #ffcc00, #ff0066);
+}
+
+.dark-mode button[type="submit"]:hover {
+    background: linear-gradient(90deg, #ff0066, #ffcc00);
+}
+
+/* Heading */
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    text-shadow: 6px 6px 14px rgba(255, 102, 204, 0.7);
+    transition: all 0.3s;
+}
+
+.dark-mode h2 {
+    color: white;
+    text-shadow: 6px 6px 14px rgba(138, 43, 226, 0.8);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    form {
+        width: 80%;
+        padding: 35px;
+    }
+    h2 {
+        font-size: 26px;
+    }
+    button[type="submit"] {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    form {
+        width: 90%;
+        padding: 30px;
+    }
+    h2 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    form {
+        width: 95%;
+        padding: 25px;
+    
+    }
+    
+    h2 {
+        font-size: 20px;
+    }
+    #darkModeToggle {
+        font-size: 0.8rem;
+        padding: 8px 14px;
+    }
+}
